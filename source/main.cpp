@@ -30,9 +30,6 @@ int main()
   std::vector<Player> players(n_players);
   int last_key = 0;
 
-  irqInit();
-  irqEnable(IRQ_VBLANK);
-
   videoSetMode(MODE_FB0);
   vramSetBankA(VRAM_A_LCD);
 
