@@ -47,7 +47,7 @@ script:
   - export DEVKITPRO=/opt/devkitpro
   - export DEVKITARM=$DEVKITPRO/devkitARM
   # Do not call qmake, this will not work
-  - cd ~/build/richelbilderbeek/$my_github
+  - cd ~/build/CarmenIJsebaart/$my_github
   - make
   - if [[ -f libnds_example_1.nds ]]; then echo "YES :-)"; else echo "NO :-("; fi
   #- ./travis_qmake_gcc_cpp98_libnds
