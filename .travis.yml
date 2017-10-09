@@ -12,7 +12,7 @@ script:
   - export DEVKITPRO=/opt/devkitpro
   - export DEVKITARM=$DEVKITPRO/devkitARM
   # Do not call qmake, this will not work
-  - cd ~/build/carmenijsebaart/$my_github
+  - cd ~/build/CarmenIJsebaart/$my_github
   - ./build_music
   - make
   - if [[ -f NDSgame.nds ]]; then echo "YES :-)"; else echo "NO :-("; fi
