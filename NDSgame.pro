@@ -1,7 +1,8 @@
 INCLUDEPATH += /opt/devkitpro/libnds/include
 INCLUDEPATH += /opt/devkitpro/libnds/include/nds
 INCLUDEPATH += /opt/devkitpro/devkitARM/arm-none-eabi/include
-LIBS += -L/opt/devkitpro/libnds-1.4.7/lib -lnds9
+INCLUDEPATH += build
+LIBS += -L/opt/devkitpro/libnds/lib -lnds9
 LIBS += -L/opt/devkitpro/devkitARM/arm-eabi/lib -lstdc++
 DEFINES += ARM9
 CONFIG   += console
