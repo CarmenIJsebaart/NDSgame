@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <vector>
 
+// For 32 bit systems, add this line:
+// https://github.com/devkitPro/buildscripts/issues/26
+extern "C" void __sync_synchronize() {}
+
+#include <maxmod9.h>
+#include "soundbank.h"
+#include "soundbank_bin.h"
+
 struct Player
 {
   int x;
@@ -27,6 +35,16 @@ int main()
 
   videoSetMode(MODE_FB0);
   vramSetBankA(VRAM_A_LCD);
+
+  //Initialize music
+  mmInitDefaultMem((mm_addr)soundbank_bin);
+
+  //Load music
+  mmLoad(MOD_MY_MUSIC);
+
+  //Start music
+  mmStart(MOD_MY_MUSIC, MM_PLAY_LOOP);
+
 
   clear_screen();
   initial_players(players, n_players);
